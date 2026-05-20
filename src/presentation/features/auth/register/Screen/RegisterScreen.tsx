@@ -1,4 +1,3 @@
-import React from 'react';
 import { Eye, EyeOff, AtSign, LockKeyhole, User } from 'lucide-react';
 import { useRegisterViewModel } from '../ViewModel/RegisterViewModel';
 import { Toast } from '../../../../components/Toast/Toast';

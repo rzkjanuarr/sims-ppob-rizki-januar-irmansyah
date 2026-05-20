@@ -1,4 +1,4 @@
-import type { TopupData } from '../../shared/topup/TopupModel';
+import type { TopupData } from '../Model/TopupModel';
 
 export type TopupResponse = {
   status: number;

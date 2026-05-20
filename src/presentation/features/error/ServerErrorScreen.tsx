@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 export const ServerErrorScreen = () => {
   const navigate = useNavigate();
 
+  const handleGoHome = () => {
+    navigate('/');
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white px-6">
       {/* Logo */}
@@ -22,6 +26,12 @@ export const ServerErrorScreen = () => {
         <p className="text-gray-600 mb-8 max-w-md">
           Maaf, terjadi kesalahan pada server kami. Silakan coba lagi nanti atau hubungi tim support.
         </p>
+        <button
+          onClick={handleGoHome}
+          className="px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors"
+        >
+          Kembali ke Beranda
+        </button>
       </div>
     </div>
   );
