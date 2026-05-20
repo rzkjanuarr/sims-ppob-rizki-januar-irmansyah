@@ -1,0 +1,19 @@
+{
+  "topNav": [
+    {
+      "id": "topup",
+      "label": "Top Up",
+      "path": "/topup"
+    },
+    {
+      "id": "transaction",
+      "label": "Transaction",
+      "path": "/transaction"
+    },
+    {
+      "id": "akun",
+      "label": "Akun",
+      "path": "/akun"
+    }
+  ]
+}

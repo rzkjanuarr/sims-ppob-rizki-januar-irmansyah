@@ -1,0 +1,268 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.modal-container {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideUp 0.3s ease-out;
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  color: #6b7280;
+}
+
+.modal-close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Logo */
+.modal-logo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Success Icon */
+.modal-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-success-icon svg {
+  color: white;
+  stroke-width: 3;
+}
+
+/* Error Icon */
+.modal-error-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-error-icon svg {
+  color: white;
+  stroke-width: 3;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Title */
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+/* Subtitle */
+.modal-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+/* Amount */
+.modal-amount {
+  margin: 20px 0;
+}
+
+.modal-amount-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+/* Description */
+.modal-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+/* Custom Content */
+.modal-content {
+  margin: 20px 0;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.modal-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  width: 100%;
+}
+
+.modal-btn-primary {
+  background-color: #ef4444;
+  color: white;
+}
+
+.modal-btn-primary:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+}
+
+.modal-btn-primary:active {
+  transform: translateY(0);
+}
+
+.modal-btn-secondary {
+  background-color: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+
+.modal-btn-secondary:hover {
+  background-color: #fef2f2;
+}
+
+/* Text Link Actions (for confirm modal) */
+.modal-text-link {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.2s;
+}
+
+.modal-text-link:hover {
+  opacity: 0.8;
+}
+
+.modal-text-link-primary {
+  color: #ef4444;
+}
+
+.modal-text-link-secondary {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Success Variant */
+.modal-success .modal-btn-primary {
+  background-color: #10b981;
+}
+
+.modal-success .modal-btn-primary:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+}
+
+.modal-success .modal-btn-secondary {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.modal-success .modal-btn-secondary:hover {
+  background-color: #f0fdf4;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-btn {
+    width: 100%;
+  }
+}
